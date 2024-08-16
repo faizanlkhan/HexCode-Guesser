@@ -1,0 +1,14 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 100px;
+}
+
+.colorbox{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(149, 235, 245);
+    border: 2px solid black;
+    align-items: center;
+}
