@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HexCode Guesser</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="heading-container">
+            <img src="logo.png" alt="HexCode Guesser" class="logo">
+
+        </div>
+        <div class="game-container">
+            <div class="colorboxes">
+                <div class="colorbox" id="box1">Target</div>
+                <div class="colorbox" id="box2">Your Color</div>
+            </div>
+            <div class="input-container">
+                <div class="input">
+                    <span class="prefix">#</span>
+                    <input type="text" placeholder="Guess the HexCode" class="input-text" maxlength="6">
+                    <button class="button">Submit</button>
+                </div>
+                <div class="resultdiv">
+                    <h3 class="result"></h3>
+                    <button class="next">Next Colour</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="hint-container" id="hintContainer" style="display: none;">
+            <div class="hint-header">
+                <h2>Hint</h2>
+            </div>
+            <div class="suggestion">
+                <p class="s1"></p>
+                <p class="s2"></p>
+                <p class="s3"></p>
+                <p class="s4"></p>
+                <p class="s5"></p>
+                <p class="s6"></p>
+            </div>
+        </div>
+        
+    </div>
+    
+    
+    <div>
+        <a href="https://buymeacoffee.com/faizanlkhan" target="_blank">
+            <p class="coffee">Buy me a Coffee!</p>
+        </a>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
