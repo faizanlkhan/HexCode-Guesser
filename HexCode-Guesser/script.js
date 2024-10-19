@@ -31,7 +31,7 @@ function RandomHex() {
 function updateColor() {
     generatedhex = RandomHex();
     colorbox1.style.backgroundColor = generatedhex;
-    console.log(generatedhex);
+   
 }
 
 function isValidHex(hex){
@@ -40,15 +40,14 @@ function isValidHex(hex){
 
 let generatedhex = RandomHex()
 colorbox1.style.backgroundColor = generatedhex
-console.log(generatedhex)
+
 
 function MatchAnswer(){
     const inputvalue = inputhex.value;
     input_split = inputvalue.split("");
         answer = generatedhex.slice(1, 7)
         answer_split = answer.split("");
-        console.log(input_split);
-        console.log(answer_split);
+    
     if (`#${inputvalue}` === generatedhex) {
         colorbox2.style.backgroundColor = generatedhex;
         input_s1.innerHTML = input_split[0];
