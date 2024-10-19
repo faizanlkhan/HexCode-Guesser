@@ -1,14 +1,230 @@
-.container{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    margin-top: 100px;
+/* Basic Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
 }
 
-.colorbox{
-    width: 200px;
-    height: 200px;
-    background-color: rgb(149, 235, 245);
-    border: 2px solid black;
+body {
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f75626, #c8370c);
+    color: #333;
+}
+
+.container {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.heading-container {
+    position: relative;
+    text-align: center;
+    margin-bottom: 0px; 
+}
+
+.logo {
+    max-width: 500px; 
+    height: auto;
+    margin-top: -180px;
+    margin-bottom: -180px;
+}
+
+.hint-text {
+    position: absolute;
+    bottom: -12px; 
+    background-color: white;
+    border-radius: 5px;
+    padding: 2px;
+    right: 0;
+    left: 0; 
+    transform: rotate(-5deg); 
+    font-size: 1rem; 
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px; 
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.colorboxes {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.colorbox {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.colorbox#box1 {
+    background-color: #141414;
+}
+
+.colorbox#box2 {
+    background-color: #9c35f6;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+
+.input {
+    display: flex;
+    align-items: center;
+}
+
+.prefix {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-right: 5px;
+    color: #141414;
+}
+
+.input-text {
+    padding: 10px;
+    width: 250px;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-right: 10px;
+    transition: border-color 0.3s;
+    border: 1px solid ;
+}
+
+.button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #c8370c;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.button:hover {
+    background-color: #9c35f6;
+    transform: scale(1.05);
+}
+
+.resultdiv {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.result {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: black;
+    font-weight: normal;
+}
+
+.next {
+    padding: 0px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: transparent;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.3s, transform 0.2s;
+}
+
+.next:hover {
+    color: #c8370c;
+    transform: scale(1.05);
+}
+.hint-container {
+    width: 100%;
+    background: white; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
+    text-align: center;
+    margin-top: 20px; 
+}
+
+.hint-header {
+    background-color: #9c35f6; /* Header color matching the theme */
+    color: white; /* Text color for the header */
+    padding: 10px; /* Padding for header */
+    border-top-left-radius: 10px; /* Rounded corners for top left */
+    border-top-right-radius: 10px; /* Rounded corners for top right */
+}
+
+.hint-container p {
+    font-size: 1rem;
+    color: #333;
+    padding: 15px; 
+    margin: 0;
+    line-height: 1.5; 
+}
+
+
+
+.suggestion {
+    display: none; 
+    margin-top: 10px;
+    text-align: center;       
+    display: inline-block;       
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 100%; 
+    
+}
+
+.suggestion h2 {
+    margin-bottom: 10px;
+}
+
+.suggestion p {
+    font-size: 1rem;
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.coffee {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.2rem;
+    color: white; 
+    text-decoration: none !important; 
+    margin-bottom: 5px;
+}
+
+.coffee:hover {
+    color: white !important; 
+    text-decoration: underline; 
+}
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    color: inherit;
 }
